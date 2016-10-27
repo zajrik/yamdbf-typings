@@ -3,12 +3,14 @@ import { Guild } from 'discord.js';
 import { Client } from 'discord.js';
 import { Message } from 'discord.js';
 import { Collection } from 'discord.js';
+import { ClientOptions } from 'discord.js';
 import { PermissionResovable as PermissionResolvable } from 'discord.js';
 
 declare module 'yamdbf'
 {
     export class Bot extends Client
     {
+        constructor(botOptions: BotOptions, clientOptions: ClientOptions);
         public name: string;
         public commandsDir: string;
         public statusText: string;
@@ -49,6 +51,7 @@ declare module 'yamdbf'
 
     export class Command
     {
+        constructor(bot: Bot, info: CommandInfo);
         public bot: Bot;
         public name: string;
         public description: string;
@@ -86,6 +89,7 @@ declare module 'yamdbf'
 
     export class CommandDispatcher
     {
+        constructor(bot: Bot);
         private _bot: Bot;
 
         public handleMessage(message: Message): Promise<any>;
@@ -107,6 +111,7 @@ declare module 'yamdbf'
 
     export class CommandLoader
     {
+        constructor(bot: Bot);
         private _bot: Bot;
 
         public loadCommands(): void;
@@ -126,6 +131,7 @@ declare module 'yamdbf'
 
     export class GuildStorage
     {
+        constructor(bot: Bot, guild: Guild | string, dataStorage: LocalStorage, settingsStorage: LocalStorage);
         private _id: string;
         private _dataStorage: LocalStorage;
         private _settingsStorage: LocalStorage;
@@ -163,6 +169,7 @@ declare module 'yamdbf'
 
     export class GuildStorageLoader
     {
+        constructor(bot: Bot);
         private _bot: Bot;
 
         public loadStorages(dataStorage: LocalStorage, settingsStorage: LocalStorage): void;
@@ -179,6 +186,7 @@ declare module 'yamdbf'
 
     export class LocalStorage
     {
+        constructor(fileName: string);
         public length: number;
         public keys: string[];
 
