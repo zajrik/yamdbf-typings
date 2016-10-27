@@ -10,7 +10,7 @@ declare module 'yamdbf'
 {
     export class Bot extends Client
     {
-        constructor(botOptions: BotOptions, clientOptions: ClientOptions);
+        constructor(botOptions: BotOptions, clientOptions?: ClientOptions);
         public name: string;
         public commandsDir: string;
         public statusText: string;
