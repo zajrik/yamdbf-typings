@@ -1,13 +1,19 @@
-import { User } from 'discord.js';
-import { Guild } from 'discord.js';
-import { Client } from 'discord.js';
-import { Message } from 'discord.js';
-import { Collection } from 'discord.js';
-import { ClientOptions } from 'discord.js';
-import { PermissionResovable as PermissionResolvable } from 'discord.js';
+// Type definitions for yamdbf v2.4.0
+// Project: https://github.com/zajrik/yamdbf
+// License: MIT
 
 declare module 'yamdbf'
 {
+    import { User } from 'discord.js';
+    import { Guild } from 'discord.js';
+    import { Client } from 'discord.js';
+    import { Message } from 'discord.js';
+    import { Collection } from 'discord.js';
+    import { ClientOptions } from 'discord.js';
+    import { PermissionResovable as PermissionResolvable } from 'discord.js';
+
+    export const version: string;
+
     export class Bot extends Client
     {
         constructor(botOptions: BotOptions, clientOptions?: ClientOptions);
@@ -66,7 +72,10 @@ declare module 'yamdbf'
         public ownerOnly: boolean;
         public overloads: string;
 
-        public action(): void;
+        public action(message: Message,
+                        args: Array<number | string>,
+                        mentions: User[],
+                        original: string): any;
         public register(): void;
 
         private _respond(message: Message, response: string, code: string): Promise<Message>;
