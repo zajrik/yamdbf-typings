@@ -66,7 +66,7 @@ declare module 'yamdbf'
         public group: string;
         public aliases: string[];
         public guildOnly: boolean;
-        public stringArgs: boolean;
+        public argOpts: ArgOpts;
         public permissions: PermissionResolvable[];
         public roles: string[];
         public ownerOnly: boolean;
@@ -89,11 +89,16 @@ declare module 'yamdbf'
         group: string;
         aliases?: string[];
         guildOnly?: boolean;
-        stringArgs?: boolean;
+        argOpts?: ArgOpts;
         permissions?: PermissionResolvable[];
         roles?: string[];
         ownerOnly?: boolean;
         overloads?: string;
+    }
+
+    type ArgOpts = {
+        stringArgs?: boolean;
+        separator?: string;
     }
 
     export class CommandDispatcher
