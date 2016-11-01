@@ -10,7 +10,7 @@ declare module 'yamdbf'
     import { Message } from 'discord.js';
     import { Collection } from 'discord.js';
     import { ClientOptions } from 'discord.js';
-    import { PermissionResovable as PermissionResolvable } from 'discord.js';
+    import { PermissionResolvable } from 'discord.js';
 
     export const version: string;
 
@@ -192,9 +192,11 @@ declare module 'yamdbf'
 
     export class GuildStorageRegistry<key, value> extends Collection<key, value>
     {
-        public get(guild: Guild | string): GuildStorage;
-        public findAll(key: string, value: any): GuildStorageRegistry<string, GuildStorage>;
-        public findAllBySetting(key: string, value: any): GuildStorageRegistry<string, GuildStorage>;
+        public get(guild: key): value;
+        public get(guild: Guild): value;
+        public findAll(key: string, value: any): GuildStorageRegistry<key, value>;
+        public findAll(key: string, value: any): any;
+        public findAllBySetting(key: string, value: any): GuildStorageRegistry<key, value>;
         public resetAllGuildSettings(defaults: DefaultGuildSettings): void;
     }
 

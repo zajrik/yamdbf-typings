@@ -4,6 +4,6 @@
     "homepage": "https://github.com/zajrik/yamdbf",
     "version": "2.3.1",
     "globalDependencies": {
-        "discord.js": "https://raw.githubusercontent.com/acdenisSK/discord.js-typings/fdc063cf44345a197180b88785bd545d6cb79e41/discord.d.ts"
+        "discord.js": "https://raw.githubusercontent.com/acdenisSK/discord.js-typings/c6fce8cee3c21b919c5596aea508c5351173b9d6/discord.d.ts"
     }
 }
