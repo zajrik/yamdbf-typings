@@ -194,9 +194,9 @@ declare module 'yamdbf'
     {
         public get(guild: key): value;
         public get(guild: Guild): value;
-        public findAll(key: string, value: any): GuildStorageRegistry<key, value>;
+        public findAll(key: string, value: any): Collection<key, value>;
         public findAll(key: string, value: any): any;
-        public findAllBySetting(key: string, value: any): GuildStorageRegistry<key, value>;
+        public findAllBySetting(key: string, value: any): Collection<key, value>;
         public resetAllGuildSettings(defaults: DefaultGuildSettings): void;
     }
 
