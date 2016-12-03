@@ -49,7 +49,7 @@ declare module 'yamdbf'
 	type BotOptions = {
 		name: string;
 		token: string;
-		commandsDir: string;
+		commandsDir?: string;
 		statusText?: string;
 		readyText?: string;
 		selfbot?: boolean;
