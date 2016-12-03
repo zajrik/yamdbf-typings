@@ -20,7 +20,9 @@ declare module 'yamdbf'
 		public name: string;
 		public commandsDir: string;
 		public statusText: string;
+		public readyText: string;
 		public selfbot: boolean;
+		public passive: boolean;
 		public version: string;
 		public disableBase: string[];
 		public config: Object;
@@ -49,7 +51,9 @@ declare module 'yamdbf'
 		token: string;
 		commandsDir: string;
 		statusText?: string;
+		readyText?: string;
 		selfbot?: boolean;
+		passive?: boolean;
 		version?: string;
 		disableBase?: string[];
 		config: Object;
