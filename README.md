@@ -5,12 +5,12 @@ Should be up to date with the latest YAMDBF version. I might actually be moving 
 # Installation
 To install the most up to date version, use:
 ```
-typings install github:zajrik/yamdbf/yamdbf.d.ts --save --global
+typings install github:zajrik/yamdbf-typings/yamdbf.d.ts --save --global
 ```
 
 To prevent pulling in potentially breaking changes, include a specific commit:
 ```
-typings install github:zajrik/yamdbf/yamdbf.d.ts#63640780777dfb85bfc3d0b7188c3be1dcf539d9 --save --global
+typings install github:zajrik/yamdbf-typings/yamdbf.d.ts#63640780777dfb85bfc3d0b7188c3be1dcf539d9 --save --global
 ```
 
 # License
