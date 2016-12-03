@@ -20,7 +20,7 @@ declare module 'yamdbf'
 		public name: string;
 		public commandsDir: string;
 		public statusText: string;
-		public selbot: boolean;
+		public selfbot: boolean;
 		public version: string;
 		public disableBase: string[];
 		public config: Object;
