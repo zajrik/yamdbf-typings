@@ -44,6 +44,9 @@ declare module 'yamdbf'
 		public removeDefaultSetting(key: string): this;
 		public defaultSettingExists(key: string): boolean;
 		public getPrefix(guild: string | Guild): string;
+
+		on(event: string, listener: Function): this;
+		on(event: 'command', listener: (name: string, args: Array<number | string>, original: string) => void): this;
 	}
 
 	type BotOptions = {
